@@ -1,0 +1,3 @@
+ai is the future .
+
+rag system combines retrieval and generation

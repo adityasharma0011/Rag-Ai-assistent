@@ -36,7 +36,7 @@ Data must be loaded before processing
 
 ---
 
-### ✅ Day 3: Chunking (Core Concept)
+### ✅ day 3  & step 3: Chunking (Core Concept)
 
 * Split large text into smaller chunks
 * Implemented overlap for better context
@@ -48,7 +48,7 @@ Data must be loaded before processing
 
 ---
 
-### ✅ Day 4: Embeddings (Basic)
+### ✅ step 4: Embeddings (Basic)
 
 * Converted text chunks into numerical form
 * Used simple embedding (length-based for learning)
@@ -58,7 +58,7 @@ Text → Vector → Meaning representation
 
 ---
 
-### ✅ Day 5: Vector Database (Basic)
+### ✅ step 5: Vector Database (Basic)
 
 * Stored embeddings in memory
 * Implemented simple search (based on similarity)
@@ -70,7 +70,7 @@ Text → Vector → Meaning representation
 ---
 ---
 
-### ✅ Day 6: Retriever (Core Search Logic 🔥)
+### ✅ step 6: Retriever (Core Search Logic 🔥)
 
 * Implemented a retriever to find the most relevant chunk based on user query
 * Used keyword matching to compare query with chunks
@@ -89,7 +89,7 @@ Retriever acts as the **search engine of RAG**
 
 ---
 
-### ✅ Day 7: Generator (Answer Creation 🤖)
+### ✅ step 7: Generator (Answer Creation 🤖)
 
 * Built a generator to create final response using retrieved context
 * Combined query + retrieved chunk to generate answer

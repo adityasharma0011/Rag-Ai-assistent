@@ -1,18 +1,24 @@
 from loader import load_data
 
-def chunk_text(text, chunk_size=50):
+def chunk_text(text, chunk_size=50, overlap=10):
     chunks = []
     
-    for i in range(0, len(text), chunk_size):
-        chunk = text[i:i + chunk_size]
+    start = 0
+    while start < len(text):
+        end = start + chunk_size
+        chunk = text[start:end]
         chunks.append(chunk)
+        
+        start += chunk_size - overlap   # overlap logic
     
     return chunks
 
 
 if __name__ == "__main__":
     text = load_data("data/sample.txt")
+    
     chunks = chunk_text(text)
-
+    
     for i, chunk in enumerate(chunks):
-        print(f"Chunk {i+1}: {chunk}")
+        print(f"\nChunk {i+1}:")
+        print(chunk)

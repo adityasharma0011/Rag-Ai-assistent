@@ -68,40 +68,99 @@ Text → Vector → Meaning representation
 * Query → Compare → Find best match
 
 ---
+---
+
+### ✅ Day 6: Retriever (Core Search Logic 🔥)
+
+* Implemented a retriever to find the most relevant chunk based on user query
+* Used keyword matching to compare query with chunks
+
+👉 Concept:
+
+* Query → Compare with chunks → Select best match
+
+👉 Improvement over previous step:
+
+* Earlier: length-based matching (not meaningful)
+* Now: word-based matching (better relevance)
+
+👉 Insight:
+Retriever acts as the **search engine of RAG**
+
+---
+
+### ✅ Day 7: Generator (Answer Creation 🤖)
+
+* Built a generator to create final response using retrieved context
+* Combined query + retrieved chunk to generate answer
+
+👉 Concept:
+
+* Context → Answer generation
+
+👉 Example:
+Query: What is RAG?
+Answer: Based on the document, RAG combines retrieval and generation
+
+👉 Insight:
+Generator is responsible for **final user-facing response**
+
+---
+
+## 🔄 Complete RAG Pipeline
+
+User Query
+↓
+Retriever (find relevant chunk)
+↓
+Generator (create answer)
+↓
+Final Response
+
+---
 
 ## ⚠️ Current Limitations
 
-* Using fake embeddings (length-based)
-* Search is not semantic (not meaning-based)
+* Embeddings are fake (length-based)
+* Retrieval is keyword-based (not semantic)
+* Generator is rule-based (not using real AI model)
 
 ---
 
-## 🚀 Next Steps
+## 🚀 Future Improvements
 
-* Implement real embeddings (OpenAI / HuggingFace)
-* Use FAISS or vector database
-* Build retriever + response generator
-
----
-
-## 🎯 Goal
-
-To build a complete RAG system from scratch and understand each component deeply.
+* Use real embeddings (OpenAI / HuggingFace)
+* Implement vector database (FAISS / Pinecone)
+* Add semantic search capability
+* Integrate real LLM for answer generation
+* Build UI (Streamlit / Web App)
 
 ---
 
-## 🛠️ Tech Stack
+## 🎯 Key Learning Outcomes
 
-* Python
-* Basic NLP logic
-* Git & GitHub
+* Understood complete RAG pipeline step-by-step
+* Learned how data flows from raw text to final answer
+* Built each component from scratch:
+
+  * Loader
+  * Chunking
+  * Embeddings
+  * Vector Storage
+  * Retriever
+  * Generator
 
 ---
 
-## 📌 Learning Outcome
+## 🧠 Final Insight
 
-* Understanding of RAG pipeline
-* Hands-on implementation
-* Real-world AI system design basics
+RAG is not just AI answering questions.
+
+It is a system where:
+
+* Data is retrieved first
+* Then answer is generated using that data
+
+👉 This makes responses more accurate and context-aware.
 
 ---
